@@ -62,12 +62,16 @@ This repository covers the following stages of the analytics pipeline:
 
 The analysis is based on four structured datasets representing a 10-machine hydraulic fleet monitored over January–February 2024.
 
-| File | Records | Description |
-|---|---|---|
-| `sensor_telemetry.csv` | 864,000 | Minute-level sensor readings per machine |
-| `failure_labels.csv` | 9 | Failure events with mode, cost, and downtime |
-| `maintenance_log.csv` | 51 | Maintenance actions with type, component, and cost |
-| `equipment_master.csv` | 10 | Machine metadata including fluid type and priority |
+| File | Records | Description | Included |
+|---|---|---|---|
+| `sensor_telemetry.csv` | 864,000 | Minute-level sensor readings per machine | ❎ Excluded - exceeds GitHub 25MB limit |
+| `failure_labels.csv` | 9 | Failure events with mode, cost, and downtime | ✅ |
+| `maintenance_log.csv` | 51 | Maintenance actions with type, component, and cost | ✅ |
+| `equipment_master.csv` | 10 | Machine metadata including fluid type and priority | ✅ |
+
+> **Note:** `sensor_telemetry.csv` is excluded from this repository due to GitHub's 25mb file size limit. The file contains 864,000 rows of minute-level sensor telemetry.
+
+---
 
 **Sensor channels captured:**
 - `pressure_bar` — Hydraulic system pressure
